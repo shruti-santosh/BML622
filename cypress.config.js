@@ -7,5 +7,6 @@ module.exports = defineConfig({
     },
     baseUrl: 'http://localhost:8080',
     specPattern: 'cypress/integration/**/*.js',  
+    supportFile: false,
   },
 });
