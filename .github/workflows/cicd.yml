@@ -47,4 +47,4 @@ jobs:
 
     - name: Push Docker image
       run: |
-        docker push shruti-santosh/bml622:latest
+        docker push shrutisan/bml622:latest
