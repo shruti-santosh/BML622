@@ -37,7 +37,7 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build . -t shruti-santosh/bml622:latest
+        docker build . -t shrutisan/bml622:latest
 
     - name: Log in to DockerHub
       uses: docker/login-action@v2
