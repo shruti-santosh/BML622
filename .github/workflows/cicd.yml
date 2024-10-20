@@ -1,0 +1,30 @@
+name: BML622
+
+on:
+  push:
+    branches:
+      - shruti-2023MCS310005
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Start local server
+      run: |
+        npx http-server -p 8080 &
+        sleep 5 # Give server time to start
+
+    - name: Run Cypress tests
+      run: npx cypress run
