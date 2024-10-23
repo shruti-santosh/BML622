@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bml622-shruti-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: bml622
+  template:
+    metadata:
+      labels:
+        app: bml622
+    spec:
+      containers:
+      - name: bml622-container
+        image: shrutisan/bml622:latest 
+        ports:
+        - containerPort: 80
